@@ -29,6 +29,41 @@ function getClassColor($_classID) {
 	}
 }
 
+function getClassName($_classID) {
+	switch($_classID) {
+		case 11:
+			return "Druid";
+		case 1:
+			return "Warrior";
+		case 2:
+			return "Paladin";
+		case 3:
+			return "Hunter";
+		case 4:
+			return "Rogue";
+		case 5:
+			return "Priest";
+		case 6:
+			return "Death Knight";
+		case 7:
+			return "Shaman";
+		case 8:
+			return "Mage";
+		case 9:
+			return "Warlock";
+		case 10:
+			return "Monk";
+		default:
+			return "Unknown";
+	}
+}
+
+function getClassCodename($_classID)
+{
+    return strtolower(str_replace(" ", "", getClassName($_classID)));
+}
+
+
 function getRaceName($_raceID) {
 	switch($_raceID) {
 		case 2:
